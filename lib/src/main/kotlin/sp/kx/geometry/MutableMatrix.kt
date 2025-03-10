@@ -2,6 +2,7 @@ package sp.kx.geometry
 
 import java.util.Objects
 
+@Deprecated("algebra")
 class MutableMatrix(
     override var m00: Double, override var m10: Double, override var m20: Double, override var m30: Double,
     override var m01: Double, override var m11: Double, override var m21: Double, override var m31: Double,
