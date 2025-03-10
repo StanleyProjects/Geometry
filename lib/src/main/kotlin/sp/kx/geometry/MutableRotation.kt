@@ -18,3 +18,11 @@ class MutableRotation(
         return Objects.hash(aX, aY, aZ)
     }
 }
+
+fun Rotation.mut(): MutableRotation {
+    return MutableRotation(
+        aX = aX,
+        aY = aY,
+        aZ = aZ,
+    )
+}
