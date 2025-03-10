@@ -3,6 +3,7 @@ package sp.kx.geometry
 import java.util.Objects
 import kotlin.time.Duration
 
+@Deprecated("physics")
 class MutableDurationInterval(
     override var a: Duration,
     override var b: Duration,
