@@ -26,7 +26,10 @@ val gh = GitHub.Repository(
     name = rootProject.name,
 )
 
-repositories.mavenCentral()
+repositories {
+    mavenCentral()
+    maven("https://s01.oss.sonatype.org/content/repositories/snapshots")
+}
 
 plugins {
     id("org.gradle.jacoco")
@@ -55,6 +58,7 @@ sourceSets.create("jmh") {
 }
 
 dependencies {
+    implementation("com.github.kepocnhh:Numbers:0.1.0u-SNAPSHOT")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${Version.jupiter}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${Version.jupiter}")
     "jmhImplementation"("org.openjdk.jmh:jmh-core:${Version.jmh}")
